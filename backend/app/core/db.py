@@ -23,13 +23,12 @@ def _to_async_url(url: str) -> str:
 
 ASYNC_DATABASE_URL = _to_async_url(settings.DATABASE_URL)
 
-engine = create_async_engine(
-    ASYNC_DATABASE_URL,
-    echo=settings.DEBUG,
-    pool_pre_ping=True,
-    pool_size=10,
-    max_overflow=20,
-)
+_engine_kwargs: dict = {"echo": settings.DEBUG}
+if ASYNC_DATABASE_URL.startswith("postgresql"):
+    # Pool tuning only makes sense for real DB drivers, not SQLite (used in tests).
+    _engine_kwargs.update(pool_pre_ping=True, pool_size=10, max_overflow=20)
+
+engine = create_async_engine(ASYNC_DATABASE_URL, **_engine_kwargs)
 
 AsyncSessionLocal = async_sessionmaker(
     engine,

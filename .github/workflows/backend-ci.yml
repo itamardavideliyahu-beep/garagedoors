@@ -18,9 +18,13 @@ defaults:
 
 jobs:
   quality:
-    name: Lint + Smoke import
+    name: Lint + Smoke
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      APP_ENV: "test"
+      SECRET_KEY: "ci-test-secret-not-used"
+      DATABASE_URL: "sqlite+aiosqlite:///:memory:"
     steps:
       - uses: actions/checkout@v4
 
@@ -35,34 +39,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install ruff
+          pip install ruff aiosqlite
 
       - name: Ruff lint
         run: ruff check app
         continue-on-error: true
 
-      - name: Smoke-import the FastAPI app
-        env:
-          APP_ENV: test
-          DATABASE_URL: sqlite+aiosqlite:///:memory:
-          SECRET_KEY: ci-test-secret-not-used
-        run: |
-          python - <<'PY'
-          from app.main import app
-          paths = [r.path for r in app.routes if hasattr(r, "path")]
-          assert "/health" in paths, "health endpoint missing"
-          assert any(p.startswith("/api/v1") for p in paths), "v1 routes missing"
-          print(f"OK -- {len(paths)} routes registered")
-          PY
-
-      - name: Pricing engine smoke test
-        run: |
-          python - <<'PY'
-          from app.services.pricing import estimate_quote
-          from app.schemas.lead import QuoteEstimateRequest
-          q = estimate_quote(QuoteEstimateRequest(
-              door_type="double", door_material="steel", issue_type="spring_broken"
-          ))
-          assert q.estimated_low > 0 and q.estimated_high > q.estimated_low
-          print(f"Quote OK: ${q.estimated_low} - ${q.estimated_high}")
-          PY
+      - name: Smoke tests
+        run: python scripts/smoke_test.py
