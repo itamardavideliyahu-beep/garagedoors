@@ -1,6 +1,6 @@
 # Local development Dockerfile - runs the Vite dev server with HMR.
 # docker-compose mounts the source as a volume so file changes are picked up live.
-FROM node:20-alpine
+FROM node:26-alpine
 
 WORKDIR /app
 
