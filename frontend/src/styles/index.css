@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --container-padding: 1rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink-900 font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold transition-all
+      focus:outline-none focus:ring-4 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-500 text-white hover:bg-brand-600 focus:ring-brand-200
+      shadow-soft hover:shadow-glow;
+  }
+
+  .btn-emergency {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-200
+      shadow-soft animate-pulse-slow;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-ink-200 text-ink-900 hover:border-brand-500 hover:text-brand-600
+      focus:ring-brand-100;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink-700 hover:bg-ink-50;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full bg-ink-100 px-3 py-1
+      text-xs font-medium text-ink-700;
+  }
+
+  .badge-brand {
+    @apply badge bg-brand-100 text-brand-800;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-100 bg-white p-6 shadow-soft;
+  }
+
+  .input {
+    @apply w-full rounded-xl border-2 border-ink-200 bg-white px-4 py-3 text-ink-900
+      placeholder:text-ink-400 focus:border-brand-500 focus:outline-none focus:ring-4
+      focus:ring-brand-100 transition;
+  }
+
+  .select {
+    @apply input appearance-none bg-white pr-10;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-ink-700;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-radial {
+    background-image: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(15, 22, 32, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 22, 32, 0.04) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+}
+
+/* Leaflet z-index fix to play nice with our sticky header. */
+.leaflet-container {
+  z-index: 0;
+}

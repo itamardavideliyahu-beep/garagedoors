@@ -1,0 +1,204 @@
+{
+  "brand": {
+    "name": "LA Garage Doors Pro",
+    "tagline": "Los expertos en puertas de garaje mas rapidos de Los Angeles."
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "areas": "Areas de Servicio",
+    "quote": "Cotizar",
+    "gallery": "Galeria",
+    "reviews": "Reseñas",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "menu": "Menu"
+  },
+  "cta": {
+    "getFreeQuote": "Cotizacion Gratis",
+    "callNow": "Llamar Ahora",
+    "callEmergency": "Emergencia 24/7",
+    "bookOnline": "Reservar Online",
+    "viewServices": "Ver Servicios",
+    "whatsapp": "WhatsApp",
+    "checkZip": "Verificar Codigo Postal"
+  },
+  "trust": {
+    "licensed": "Licenciado",
+    "bonded": "Afianzado",
+    "insured": "Asegurado",
+    "bbb": "BBB A+",
+    "sameDay": "Servicio el Mismo Dia",
+    "warranty": "Garantia de por Vida",
+    "rating": "{{rating}}/5 de {{count}}+ reseñas"
+  },
+  "hero": {
+    "badge": "Respuesta en 60 minutos en todo Los Angeles",
+    "title": "Puerta de garaje rota? <accent>Llegamos en 60 minutos.</accent>",
+    "subtitle": "Reparacion e instalacion el mismo dia en LA. Precios honestos y por adelantado. Licenciados, afianzados y asegurados.",
+    "ctaPrimary": "Cotizacion Instantanea",
+    "ctaSecondary": "Llamar ({{phone}})",
+    "stat1": "12,500+",
+    "stat1Label": "Clientes felices en LA",
+    "stat2": "60 min",
+    "stat2Label": "Respuesta promedio",
+    "stat3": "15 años",
+    "stat3Label": "Sirviendo a LA",
+    "stat4": "4.9/5",
+    "stat4Label": "En Google y Yelp"
+  },
+  "emergencyBar": {
+    "title": "Puerta atascada ahora?",
+    "subtitle": "Operador en vivo 24/7. Tiempo promedio de llegada: menos de 60 minutos.",
+    "button": "Llamar Linea de Emergencia"
+  },
+  "services": {
+    "title": "Cualquier problema de puerta de garaje - resuelto hoy.",
+    "subtitle": "Precios fijos transparentes. Sin sorpresas, sin ventas adicionales, sin tarifa de visita cuando aprueba la reparacion.",
+    "startsAt": "Desde",
+    "duration": "{{minutes}} min tipico",
+    "emergency": "Emergencia disponible",
+    "viewAll": "Ver todos los servicios"
+  },
+  "quote": {
+    "title": "Obtenga su cotizacion instantanea",
+    "subtitle": "Cuentenos sobre su puerta. Rango de precio en 30 segundos.",
+    "step": "Paso {{current}} de {{total}}",
+    "step1Title": "Que tipo de puerta?",
+    "step2Title": "Que esta pasando?",
+    "step3Title": "A donde enviamos la cotizacion?",
+    "doorType": {
+      "single": "Un carro (puerta sencilla)",
+      "double": "Dos carros (puerta ancha)",
+      "commercial": "Comercial / industrial"
+    },
+    "material": {
+      "label": "Material de la puerta",
+      "steel": "Acero",
+      "aluminum": "Aluminio",
+      "wood": "Madera",
+      "fiberglass": "Fibra de vidrio",
+      "vinyl": "Vinilo",
+      "unknown": "No estoy seguro"
+    },
+    "issue": {
+      "spring_broken": "Resorte roto",
+      "opener_failure": "Abridor no funciona",
+      "off_track": "Puerta fuera del riel",
+      "panel_damage": "Panel danado",
+      "cable_snapped": "Cable roto",
+      "noisy": "Ruidosa / chirriante",
+      "remote_issue": "Problema con remoto / teclado",
+      "new_install": "Quiero una puerta nueva",
+      "tune_up": "Mantenimiento",
+      "other": "Otra cosa"
+    },
+    "fullName": "Su nombre",
+    "phone": "Numero de telefono",
+    "email": "Email (opcional)",
+    "zip": "Codigo postal",
+    "address": "Direccion (opcional)",
+    "message": "Algo mas que debamos saber?",
+    "isEmergency": "Necesito que se arregle hoy",
+    "consent": "Acepto ser contactado sobre mi cotizacion. Nunca compartimos su informacion.",
+    "back": "Atras",
+    "next": "Siguiente",
+    "submit": "Obtener Cotizacion",
+    "submitting": "Calculando...",
+    "estimateTitle": "Su estimacion preliminar gratuita",
+    "estimateRange": "${{low}} - ${{high}}",
+    "estimateNote": "Precio final confirmado por su tecnico despues de la inspeccion. Sin tarifa de visita cuando aprueba la reparacion.",
+    "inAreaYes": "Buenas noticias! Esta en nuestra area de servicio.",
+    "inAreaResponse": "Tiempo de respuesta promedio: {{minutes}} min",
+    "inAreaNo": "Es posible que aun podamos ayudar - llamenos para confirmar.",
+    "thankYou": "Gracias {{name}}!",
+    "thankYouMessage": "Le llamaremos en menos de 10 minutos al {{phone}}. Revise sus mensajes para la confirmacion."
+  },
+  "areas": {
+    "title": "Sirviendo a todo el condado de Los Angeles",
+    "subtitle": "Desde el Westside hasta el SGV, nuestros camiones estan a minutos.",
+    "responseTime": "~{{minutes}} min respuesta",
+    "checkZipTitle": "Estamos en su area?",
+    "checkZipPlaceholder": "Ingrese su codigo postal",
+    "checkButton": "Verificar cobertura",
+    "inServiceArea": "Si - cubrimos {{area}} con ~{{minutes}} min de respuesta.",
+    "notInArea": "No estamos seguros - llamenos y haremos lo posible por ayudar.",
+    "popularZips": "Codigos postales populares:"
+  },
+  "gallery": {
+    "title": "Antes y despues - trabajos reales en LA",
+    "subtitle": "Pase el cursor o toque para ver la transformacion.",
+    "before": "Antes",
+    "after": "Despues"
+  },
+  "reviews": {
+    "title": "12,500+ familias de LA confian en nosotros",
+    "subtitle": "Ganamos 5 estrellas un vecino a la vez.",
+    "verified": "Cliente verificado"
+  },
+  "brands": {
+    "title": "Servicio para todas las marcas principales",
+    "subtitle": "Piezas originales y tecnicos certificados de fabrica."
+  },
+  "stats": {
+    "title": "Numeros que generan confianza",
+    "happyCustomers": "Clientes felices",
+    "yearsExperience": "Años sirviendo a LA",
+    "technicians": "Tecnicos locales",
+    "avgResponse": "Respuesta promedio (min)"
+  },
+  "maintenance": {
+    "title": "Plan de Cuidado LA Garage Doors",
+    "subtitle": "Dos visitas al año, despacho prioritario y 10% de descuento en todo.",
+    "price": "$149/año",
+    "feature1": "Dos mantenimientos profesionales al año",
+    "feature2": "10% de descuento en reparaciones y piezas",
+    "feature3": "Despacho prioritario el mismo dia",
+    "feature4": "Inspecciones de seguridad gratuitas",
+    "feature5": "Garantia de por vida en resortes",
+    "cta": "Unirme al plan"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Algo mas? Llamenos o mensaje en cualquier momento."
+  },
+  "contact": {
+    "title": "Hable con un operador real basado en LA",
+    "subtitle": "No es un servicio de contestador. Humanos reales 24/7.",
+    "phone": "Telefono",
+    "email": "Email",
+    "hours": "Horario",
+    "address": "Area de servicio",
+    "formTitle": "Enviarnos un mensaje",
+    "name": "Su nombre",
+    "phoneField": "Telefono",
+    "emailField": "Email",
+    "messageField": "Como podemos ayudar?",
+    "submit": "Enviar mensaje",
+    "submitting": "Enviando...",
+    "success": "Gracias! Le contactaremos en menos de 10 minutos."
+  },
+  "footer": {
+    "tagline": "Negocio familiar, basado en LA. Licenciado CSLB, afianzado y asegurado.",
+    "navigation": "Navegacion",
+    "services": "Servicios",
+    "company": "Empresa",
+    "contact": "Contacto",
+    "copyright": "© {{year}} {{brand}}. Todos los derechos reservados.",
+    "license": "Licencia {{license}}"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salio mal. Intentelo de nuevo.",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Direccion",
+    "from": "Desde",
+    "minutes": "minutos",
+    "perYear": "por año",
+    "free": "GRATIS",
+    "language": "Idioma",
+    "english": "English",
+    "spanish": "Español"
+  }
+}

@@ -1,0 +1,14 @@
+# Local development Dockerfile - runs the Vite dev server with HMR.
+# docker-compose mounts the source as a volume so file changes are picked up live.
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json* ./
+RUN npm install --no-audit --no-fund
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

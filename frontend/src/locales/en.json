@@ -1,0 +1,204 @@
+{
+  "brand": {
+    "name": "LA Garage Doors Pro",
+    "tagline": "Los Angeles' fastest garage door pros."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "areas": "Service Areas",
+    "quote": "Get Quote",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "cta": {
+    "getFreeQuote": "Get Free Quote",
+    "callNow": "Call Now",
+    "callEmergency": "Emergency 24/7",
+    "bookOnline": "Book Online",
+    "viewServices": "View Services",
+    "whatsapp": "WhatsApp Us",
+    "checkZip": "Check Your Zip"
+  },
+  "trust": {
+    "licensed": "Licensed",
+    "bonded": "Bonded",
+    "insured": "Insured",
+    "bbb": "BBB A+",
+    "sameDay": "Same-Day Service",
+    "warranty": "Lifetime Warranty",
+    "rating": "{{rating}}/5 from {{count}}+ reviews"
+  },
+  "hero": {
+    "badge": "60-minute response across Los Angeles",
+    "title": "Garage door broken? <accent>We'll be there in 60 minutes.</accent>",
+    "subtitle": "Same-day repair & installation across LA. Honest, upfront pricing. Licensed, bonded & insured.",
+    "ctaPrimary": "Get Instant Quote",
+    "ctaSecondary": "Call ({{phone}})",
+    "stat1": "12,500+",
+    "stat1Label": "Happy LA customers",
+    "stat2": "60 min",
+    "stat2Label": "Average response",
+    "stat3": "15 yrs",
+    "stat3Label": "Serving Los Angeles",
+    "stat4": "4.9/5",
+    "stat4Label": "On Google & Yelp"
+  },
+  "emergencyBar": {
+    "title": "Door stuck right now?",
+    "subtitle": "Live dispatcher 24/7. Average arrival in LA: under 60 minutes.",
+    "button": "Call Emergency Line"
+  },
+  "services": {
+    "title": "Every garage door problem - solved today.",
+    "subtitle": "Transparent flat-rate pricing. No surprises, no upsells, no service-call fee when you approve the repair.",
+    "startsAt": "Starts at",
+    "duration": "{{minutes}} min typical",
+    "emergency": "Emergency available",
+    "viewAll": "See all services"
+  },
+  "quote": {
+    "title": "Get your instant quote",
+    "subtitle": "Tell us about your door. Get a price range in 30 seconds.",
+    "step": "Step {{current}} of {{total}}",
+    "step1Title": "What kind of door?",
+    "step2Title": "What's going on?",
+    "step3Title": "Where should we send the quote?",
+    "doorType": {
+      "single": "Single car (one door)",
+      "double": "Double car (one wide door)",
+      "commercial": "Commercial / industrial"
+    },
+    "material": {
+      "label": "Door material",
+      "steel": "Steel",
+      "aluminum": "Aluminum",
+      "wood": "Wood",
+      "fiberglass": "Fiberglass",
+      "vinyl": "Vinyl",
+      "unknown": "Not sure"
+    },
+    "issue": {
+      "spring_broken": "Broken spring",
+      "opener_failure": "Opener not working",
+      "off_track": "Door off track",
+      "panel_damage": "Damaged panel",
+      "cable_snapped": "Snapped cable",
+      "noisy": "Noisy / squeaky",
+      "remote_issue": "Remote / keypad issue",
+      "new_install": "Want a new door",
+      "tune_up": "Maintenance tune-up",
+      "other": "Something else"
+    },
+    "fullName": "Your name",
+    "phone": "Phone number",
+    "email": "Email (optional)",
+    "zip": "Zip code",
+    "address": "Address (optional)",
+    "message": "Anything else we should know?",
+    "isEmergency": "I need this fixed today",
+    "consent": "I agree to be contacted about my quote. We never share your info.",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Get My Quote",
+    "submitting": "Calculating...",
+    "estimateTitle": "Your free preliminary estimate",
+    "estimateRange": "${{low}} - ${{high}}",
+    "estimateNote": "Final price confirmed by your technician after inspection. No service-call fee when you approve the repair.",
+    "inAreaYes": "Great news! You're in our service area.",
+    "inAreaResponse": "Average response time: {{minutes}} min",
+    "inAreaNo": "We may still be able to help - call us to confirm.",
+    "thankYou": "Thanks {{name}}!",
+    "thankYouMessage": "We'll call you within 10 minutes at {{phone}}. Check your messages for a confirmation."
+  },
+  "areas": {
+    "title": "Serving all of Los Angeles County",
+    "subtitle": "From the Westside to the SGV, our trucks are minutes away.",
+    "responseTime": "~{{minutes}} min response",
+    "checkZipTitle": "Are we in your area?",
+    "checkZipPlaceholder": "Enter your zip code",
+    "checkButton": "Check coverage",
+    "inServiceArea": "Yes - we cover {{area}} with ~{{minutes}} min response.",
+    "notInArea": "We're not sure - call us and we'll do our best to help.",
+    "popularZips": "Popular zip codes:"
+  },
+  "gallery": {
+    "title": "Before & after - real LA jobs",
+    "subtitle": "Hover or tap to see the transformation.",
+    "before": "Before",
+    "after": "After"
+  },
+  "reviews": {
+    "title": "Trusted by 12,500+ LA homeowners",
+    "subtitle": "We earn 5 stars one neighbor at a time.",
+    "verified": "Verified customer"
+  },
+  "brands": {
+    "title": "We service every major brand",
+    "subtitle": "Genuine parts and factory-trained technicians."
+  },
+  "stats": {
+    "title": "Numbers that build trust",
+    "happyCustomers": "Happy customers",
+    "yearsExperience": "Years serving LA",
+    "technicians": "Local technicians",
+    "avgResponse": "Avg response (min)"
+  },
+  "maintenance": {
+    "title": "LA Garage Doors Care Plan",
+    "subtitle": "Two visits a year, priority dispatch and 10% off everything.",
+    "price": "$149/year",
+    "feature1": "Two professional tune-ups per year",
+    "feature2": "10% off repairs and parts",
+    "feature3": "Priority same-day dispatch",
+    "feature4": "Free safety inspections",
+    "feature5": "Lifetime spring warranty",
+    "cta": "Join the plan"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Anything else? Call or text us anytime."
+  },
+  "contact": {
+    "title": "Talk to a real LA-based dispatcher",
+    "subtitle": "Not an answering service. Real humans 24/7.",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "address": "Service area",
+    "formTitle": "Send us a message",
+    "name": "Your name",
+    "phoneField": "Phone",
+    "emailField": "Email",
+    "messageField": "How can we help?",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Thanks! We'll reach out within 10 minutes."
+  },
+  "footer": {
+    "tagline": "Family-owned, LA-based. Licensed CSLB, bonded and insured.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "copyright": "© {{year}} {{brand}}. All rights reserved.",
+    "license": "License {{license}}"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "from": "From",
+    "minutes": "minutes",
+    "perYear": "per year",
+    "free": "FREE",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Español"
+  }
+}

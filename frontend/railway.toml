@@ -1,0 +1,21 @@
+# Railway service configuration for the Vite + NGINX frontend.
+# Docs: https://docs.railway.com/reference/config-as-code
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+# Pass the Vite env vars at build time. Define them in the service
+# variables in Railway; they'll be substituted into the build args.
+[build.args]
+VITE_API_BASE_URL = "${{VITE_API_BASE_URL}}"
+VITE_BUSINESS_PHONE = "${{VITE_BUSINESS_PHONE}}"
+VITE_EMERGENCY_PHONE = "${{VITE_EMERGENCY_PHONE}}"
+VITE_WHATSAPP_NUMBER = "${{VITE_WHATSAPP_NUMBER}}"
+
+[deploy]
+healthcheckPath = "/"
+healthcheckTimeout = 30
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+numReplicas = 1
