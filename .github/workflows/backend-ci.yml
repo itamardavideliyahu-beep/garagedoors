@@ -25,6 +25,7 @@ jobs:
       APP_ENV: "test"
       SECRET_KEY: "ci-test-secret-not-used"
       DATABASE_URL: "sqlite+aiosqlite:///:memory:"
+      PYTHONPATH: "."
     steps:
       - uses: actions/checkout@v4
 
