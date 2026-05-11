@@ -3,7 +3,7 @@
 # static bundle via NGINX. The local dev workflow uses Dockerfile.dev instead.
 
 # ---------- Stage 1: build ----------
-FROM node:20-alpine AS builder
+FROM node:26-alpine AS builder
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
