@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Award, Clock, Phone, ShieldCheck, Star } from 'lucide-react'
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import { config } from '@/lib/config'
+import { siteConfig } from '@/lib/siteConfig'
 import { formatPhone, telHref } from '@/lib/utils'
 
 export function Hero() {
@@ -24,18 +25,16 @@ export function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-300">
             <Clock className="h-3.5 w-3.5" />
-            {t('hero.badge')}
+            {siteConfig.heroBadge}
           </span>
 
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-            <Trans
-              i18nKey="hero.title"
-              components={{ accent: <span className="text-brand-400" /> }}
-            />
+            {t('hero.titleBefore')}{' '}
+            <span className="text-brand-400">{siteConfig.heroAccent}</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-lg text-ink-200 sm:text-xl">
-            {t('hero.subtitle')}
+            {siteConfig.heroSubtitle}
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -64,13 +63,13 @@ export function Hero() {
             </span>
             <span className="hidden h-3 w-px bg-white/20 sm:inline-block" />
             <span className="flex items-center gap-1.5">
-              <span className="flex">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                ))}
+                <span className="flex">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </span>
+                {t('hero.stat4')} · {t('hero.stat4Label')}
               </span>
-              4.9/5 · 1,200+ reviews
-            </span>
           </div>
         </div>
 

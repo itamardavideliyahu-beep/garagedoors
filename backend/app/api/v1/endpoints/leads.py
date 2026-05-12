@@ -1,8 +1,13 @@
 """Leads + quote estimation endpoints."""
 
-from fastapi import APIRouter, Depends, status
+import logging
+from contextlib import suppress
+
+import httpx
+from fastapi import APIRouter, BackgroundTasks, Depends, status
 from sqlalchemy import desc, select
 
+from app.core.config import settings
 from app.core.deps import DbSession, require_admin, require_dispatcher
 from app.models.lead import Lead, LeadSource
 from app.schemas.lead import (
@@ -15,7 +20,37 @@ from app.schemas.lead import (
 from app.services.pricing import estimate_quote
 from app.services.service_area import lookup_zip
 
+logger = logging.getLogger(__name__)
 router = APIRouter()
+
+
+async def _notify_lambda(lead: Lead) -> None:
+    """Fire-and-forget POST to the Lambda notification function."""
+    url = settings.LAMBDA_NOTIFY_URL
+    if not url:
+        return
+    payload = {
+        "formType": "new_lead",
+        "data": {
+            "leadId":    lead.id,
+            "name":      lead.full_name,
+            "phone":     lead.phone,
+            "email":     lead.email or "",
+            "zipCode":   lead.zip_code or "",
+            "address":   lead.address or "",
+            "issue":     lead.issue_type or "",
+            "urgency":   lead.urgency,
+            "source":    lead.source,
+            "estLow":    float(lead.estimated_low)  if lead.estimated_low  else None,
+            "estHigh":   float(lead.estimated_high) if lead.estimated_high else None,
+            "siteId":    (lead.extra_data or {}).get("site", "main"),
+            "areaName":  (lead.extra_data or {}).get("area", "Los Angeles"),
+        },
+    }
+    with suppress(Exception):
+        async with httpx.AsyncClient(timeout=8) as client:
+            resp = await client.post(url, json=payload)
+            logger.info("Lambda notify: %s", resp.status_code)
 
 
 @router.post(
@@ -24,11 +59,16 @@ router = APIRouter()
     status_code=status.HTTP_201_CREATED,
     summary="Public contact form / lead capture",
 )
-async def create_lead(payload: LeadCreate, db: DbSession) -> Lead:
+async def create_lead(
+    payload: LeadCreate,
+    db: DbSession,
+    background_tasks: BackgroundTasks,
+) -> Lead:
     lead = Lead(**payload.model_dump())
     db.add(lead)
     await db.commit()
     await db.refresh(lead)
+    background_tasks.add_task(_notify_lambda, lead)
     return lead
 
 
@@ -52,7 +92,11 @@ async def quote_estimate(payload: QuoteEstimateRequest, db: DbSession) -> QuoteE
     status_code=status.HTTP_201_CREATED,
     summary="Submit a quote + contact details (one-step form)",
 )
-async def submit_quote_lead(payload: LeadSubmitRequest, db: DbSession) -> Lead:
+async def submit_quote_lead(
+    payload: LeadSubmitRequest,
+    db: DbSession,
+    background_tasks: BackgroundTasks,
+) -> Lead:
     quote = estimate_quote(payload.quote)
     source = LeadSource.EMERGENCY if payload.quote.is_emergency else LeadSource.WEB_QUOTE
     lead = Lead(
@@ -70,11 +114,16 @@ async def submit_quote_lead(payload: LeadSubmitRequest, db: DbSession) -> Lead:
         estimated_low=quote.estimated_low,
         estimated_high=quote.estimated_high,
         locale=payload.quote.locale,
-        extra_data={"consent": payload.consent},
+        extra_data={
+            "consent": payload.consent,
+            "site": getattr(payload, "site_id", "main"),
+            "area": getattr(payload, "area_name", "Los Angeles"),
+        },
     )
     db.add(lead)
     await db.commit()
     await db.refresh(lead)
+    background_tasks.add_task(_notify_lambda, lead)
     return lead
 
 

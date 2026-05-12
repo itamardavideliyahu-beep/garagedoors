@@ -291,96 +291,13 @@ SERVICE_AREAS_SEED: list[dict] = [
 ]
 
 
-REVIEWS_SEED: list[dict] = [
-    {
-        "customer_name": "Maria G.",
-        "customer_location": "Santa Monica, CA",
-        "rating": 5,
-        "title": "Saved my morning!",
-        "comment": (
-            "Spring broke at 7am, car trapped inside. Called and a technician was here "
-            "in 40 minutes. Honest pricing, fixed in under an hour. Highly recommend!"
-        ),
-        "service_type": "Spring repair",
-        "is_featured": True,
-        "is_published": True,
-        "source": "Google",
-    },
-    {
-        "customer_name": "David K.",
-        "customer_location": "Sherman Oaks, CA",
-        "rating": 5,
-        "title": "Professional and fast",
-        "comment": (
-            "Installed a new LiftMaster Wi-Fi opener with HomeKit. The tech explained "
-            "everything in plain English and the price was exactly what was quoted online."
-        ),
-        "service_type": "Opener install",
-        "is_featured": True,
-        "is_published": True,
-        "source": "Yelp",
-    },
-    {
-        "customer_name": "Jennifer L.",
-        "customer_location": "Pasadena, CA",
-        "rating": 5,
-        "title": "Hablan espanol - excellent service",
-        "comment": (
-            "El tecnico fue muy amable y profesional. Reparo la puerta el mismo dia y "
-            "el precio fue justo. Muy recomendado para la familia hispana."
-        ),
-        "service_type": "Off-track repair",
-        "is_featured": True,
-        "is_published": True,
-        "source": "Google",
-    },
-    {
-        "customer_name": "Robert M.",
-        "customer_location": "Long Beach, CA",
-        "rating": 5,
-        "title": "Best price in LA",
-        "comment": (
-            "Got 3 quotes - these guys were $200 less than the big-name competitor for "
-            "the same job. New panel looks perfect. Will use again."
-        ),
-        "service_type": "Panel replacement",
-        "is_featured": True,
-        "is_published": True,
-        "source": "Google",
-    },
-    {
-        "customer_name": "Aisha W.",
-        "customer_location": "Beverly Hills, CA",
-        "rating": 5,
-        "title": "Beautiful new wood door",
-        "comment": (
-            "Custom wood door installed last week. Crew was on time, clean, and the "
-            "finished work is gorgeous. Got compliments from the neighbors already."
-        ),
-        "service_type": "New installation",
-        "is_featured": True,
-        "is_published": True,
-        "source": "Website",
-    },
-    {
-        "customer_name": "Carlos R.",
-        "customer_location": "Downtown LA",
-        "rating": 5,
-        "title": "Emergency at midnight",
-        "comment": (
-            "Roll-up door at my body shop got stuck at midnight. Technician was here in "
-            "55 minutes, had the part on the truck, problem solved. Lifesaver."
-        ),
-        "service_type": "Commercial / Emergency",
-        "is_featured": False,
-        "is_published": True,
-        "source": "Google",
-    },
-]
+# Reviews are NOT seeded — real reviews should be collected from actual customers
+# and entered via the admin panel or imported from Google/Yelp.
+REVIEWS_SEED: list[dict] = []
 
 
 ADMIN_SEED = {
-    "email": "admin@lagaragedoorspro.com",
+    "email": "garagedoor01kl@gmail.com",
     "password": "ChangeMe123!",
     "full_name": "Site Administrator",
     "role": UserRole.ADMIN,

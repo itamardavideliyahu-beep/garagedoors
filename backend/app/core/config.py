@@ -38,12 +38,12 @@ class Settings(BaseSettings):
         ]
     )
 
-    BUSINESS_NAME: str = "LA Garage Doors Pro"
-    BUSINESS_PHONE: str = "+13105551234"
-    BUSINESS_EMAIL: str = "info@lagaragedoorspro.com"
-    BUSINESS_LICENSE: str = "CSLB #1234567"
-    EMERGENCY_PHONE: str = "+13105550911"
-    WHATSAPP_NUMBER: str = "13105551234"
+    BUSINESS_NAME: str = "Premier Garage Doors LA"
+    BUSINESS_PHONE: str = "+18188562046"
+    BUSINESS_EMAIL: str = "garagedoor01kl@gmail.com"
+    BUSINESS_LICENSE: str = "CSLB #1062639"
+    EMERGENCY_PHONE: str = "+18188562046"
+    WHATSAPP_NUMBER: str = "18188562046"
 
     STRIPE_SECRET_KEY: str = ""
     STRIPE_WEBHOOK_SECRET: str = ""
@@ -54,6 +54,10 @@ class Settings(BaseSettings):
     SENDGRID_FROM_EMAIL: str = ""
     GOOGLE_MAPS_API_KEY: str = ""
     OPENAI_API_KEY: str = ""
+
+    # AWS Lambda URL for lead notifications (email + SMS)
+    # Set to the deployed Lambda function URL in production.
+    LAMBDA_NOTIFY_URL: str = ""
 
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod

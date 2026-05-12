@@ -34,18 +34,15 @@
   },
   "hero": {
     "badge": "60-minute response across Los Angeles",
-    "title": "Garage door broken? <accent>We'll be there in 60 minutes.</accent>",
-    "subtitle": "Same-day repair & installation across LA. Honest, upfront pricing. Licensed, bonded & insured.",
-    "ctaPrimary": "Get Instant Quote",
-    "ctaSecondary": "Call ({{phone}})",
-    "stat1": "12,500+",
-    "stat1Label": "Happy LA customers",
+    "titleBefore": "Garage door broken?",
+    "stat1": "100+",
+    "stat1Label": "Happy customers",
     "stat2": "60 min",
     "stat2Label": "Average response",
-    "stat3": "15 yrs",
-    "stat3Label": "Serving Los Angeles",
-    "stat4": "4.9/5",
-    "stat4Label": "On Google & Yelp"
+    "stat3": "Same day",
+    "stat3Label": "Service available",
+    "stat4": "5★",
+    "stat4Label": "Rated on Google"
   },
   "emergencyBar": {
     "title": "Door stuck right now?",
@@ -132,7 +129,7 @@
     "after": "After"
   },
   "reviews": {
-    "title": "Trusted by 12,500+ LA homeowners",
+    "title": "What our customers say",
     "subtitle": "We earn 5 stars one neighbor at a time.",
     "verified": "Verified customer"
   },
@@ -179,7 +176,7 @@
     "success": "Thanks! We'll reach out within 10 minutes."
   },
   "footer": {
-    "tagline": "Family-owned, LA-based. Licensed CSLB, bonded and insured.",
+    "tagline": "Local garage door experts. Licensed partners, bonded & insured.",
     "navigation": "Navigation",
     "services": "Services",
     "company": "Company",

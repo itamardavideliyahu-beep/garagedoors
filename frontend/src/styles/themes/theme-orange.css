@@ -1,0 +1,14 @@
+/* Orange theme — default / Premier Garage Doors LA */
+:root {
+  --brand-50:  255 247 236;
+  --brand-100: 255 234 208;
+  --brand-200: 255 210 154;
+  --brand-300: 255 179 92;
+  --brand-400: 255 145 40;
+  --brand-500: 255 117 16;
+  --brand-600: 240 89 5;
+  --brand-700: 198 65 7;
+  --brand-800: 157 52 14;
+  --brand-900: 126 44 16;
+  --brand-950: 68 20 5;
+}

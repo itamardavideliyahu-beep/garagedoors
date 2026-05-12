@@ -4,6 +4,7 @@ import { Menu, Phone, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { cn, formatPhone, telHref } from '@/lib/utils'
 import { config } from '@/lib/config'
+import { siteConfig } from '@/lib/siteConfig'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header() {
@@ -31,9 +32,9 @@ export function Header() {
             </svg>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-lg font-bold text-ink-900">LA Garage Doors</div>
+            <div className="font-display text-lg font-bold text-ink-900">{siteConfig.logoLine1}</div>
             <div className="text-[11px] font-semibold uppercase tracking-wider text-brand-600">
-              Pro
+              {siteConfig.logoLine2}
             </div>
           </div>
         </Link>

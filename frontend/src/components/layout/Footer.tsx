@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Clock, Award } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { config } from '@/lib/config'
+import { siteConfig } from '@/lib/siteConfig'
 import { formatPhone, telHref } from '@/lib/utils'
 
 export function Footer() {
@@ -22,16 +23,15 @@ export function Footer() {
               </svg>
             </div>
             <div className="leading-tight">
-              <div className="font-display text-lg font-bold text-white">LA Garage Doors</div>
+              <div className="font-display text-lg font-bold text-white">{siteConfig.logoLine1}</div>
               <div className="text-[11px] font-semibold uppercase tracking-wider text-brand-400">
-                Pro
+                {siteConfig.logoLine2}
               </div>
             </div>
           </Link>
           <p className="mt-4 text-sm text-ink-400">{t('footer.tagline')}</p>
-          <p className="mt-3 inline-flex items-center gap-2 text-xs text-ink-500">
-            <Award className="h-4 w-4" />
-            {t('footer.license', { license: 'CSLB #1234567' })}
+          <p className="mt-3 text-xs text-ink-500">
+            {t('footer.license', { license: 'CSLB #1062639' })}
           </p>
         </div>
 
@@ -76,8 +76,8 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 flex-none text-brand-400" />
-              <a href="mailto:info@lagaragedoorspro.com" className="hover:text-white">
-                info@lagaragedoorspro.com
+              <a href="mailto:garagedoor01kl@gmail.com" className="hover:text-white">
+                garagedoor01kl@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-2">
@@ -86,7 +86,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 flex-none text-brand-400" />
-              <span>Greater Los Angeles area</span>
+              <span>{siteConfig.areaName}</span>
             </li>
           </ul>
         </div>

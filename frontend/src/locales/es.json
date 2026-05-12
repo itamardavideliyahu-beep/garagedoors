@@ -34,18 +34,15 @@
   },
   "hero": {
     "badge": "Respuesta en 60 minutos en todo Los Angeles",
-    "title": "Puerta de garaje rota? <accent>Llegamos en 60 minutos.</accent>",
-    "subtitle": "Reparacion e instalacion el mismo dia en LA. Precios honestos y por adelantado. Licenciados, afianzados y asegurados.",
-    "ctaPrimary": "Cotizacion Instantanea",
-    "ctaSecondary": "Llamar ({{phone}})",
-    "stat1": "12,500+",
-    "stat1Label": "Clientes felices en LA",
+    "titleBefore": "Puerta de garaje rota?",
+    "stat1": "100+",
+    "stat1Label": "Clientes satisfechos",
     "stat2": "60 min",
     "stat2Label": "Respuesta promedio",
-    "stat3": "15 años",
-    "stat3Label": "Sirviendo a LA",
-    "stat4": "4.9/5",
-    "stat4Label": "En Google y Yelp"
+    "stat3": "Mismo dia",
+    "stat3Label": "Servicio disponible",
+    "stat4": "5★",
+    "stat4Label": "Calificado en Google"
   },
   "emergencyBar": {
     "title": "Puerta atascada ahora?",
